@@ -6,3 +6,6 @@
 
 ## Trello
 https://trello.com/b/xsDmwDTm/footify
+
+## Try on 
+http://footify.surge.sh

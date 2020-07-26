@@ -1,0 +1,195 @@
+.player
+    display: flex
+    justify-content: center
+    background-color: #ffffff
+    font-family: raleway
+=nameSize()
+    color: #320090
+    display: flex
+    justify-content: start
+    margin-left: 1rem
+    font-family: raleway
+    font-weight: bold 700
+.player-card
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    &__item
+        background-color: #73f182
+        margin-top: 1.5rem
+        margin-right: 0.2rem
+        list-style: none
+        height: 370px
+        border-radius: 20px
+        min-width: 420px          
+    &__player
+        height: auto
+        display: grid
+        height: 50%
+        align-content: center
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr 1fr 1fr
+        grid-template-areas: "emblem emblem number number image image image image" "emblem emblem number number image image image image" "name name name . image image image image" "surname surname surname . image image image image"
+    &__emblem
+        grid-area: emblem
+        margin: 0.5rem
+        display: flex
+        justify-content: center
+        align-items: center
+        & > img
+            width: 70px
+            height: auto
+            min-width: 60px
+            min-height: 60px
+    &__number
+        grid-area: number
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: raleway
+        font-size: 2.2rem
+        font-weight: 700
+        color: #320090
+        margin-bottom: 1rem
+        & > span
+            height: 50px
+            text-align: center
+            width: 50px
+            background: #ffffff
+            border-radius: 50%
+    &__image
+        grid-area: image
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        & > img
+            max-width: 180px
+            max-height: auto
+    &__name-first
+        grid-area: name
+        +nameSize()
+        align-items: flex-end
+    &__name-surname
+        grid-area: surname
+        +nameSize()
+    &__line
+        border: 3px solid #320090
+    =infoLetter()
+        font-size: 1rem
+        font-weight: 600
+        color: #320090
+        margin-left: 1.1rem
+        margin-top: .4rem
+    &__small-line
+        position: relative
+        bottom: 2.7rem
+    &__info
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+    &__team
+        +infoLetter()
+        grid-area: team
+        margin-top: 1rem
+        & > span
+            grid-area: team-answer
+            font-size: 1rem
+            margin-top: 0.3rem
+            margin-left: 0.4rem
+            color: black
+            font-weight: 500
+    &__country
+        +infoLetter()
+        grid-area: country
+        & > span
+            grid-area: country-answer
+            font-size: 1rem
+            margin-top: 0.3rem
+            color: black
+            font-weight: 500
+    &__birth
+        +infoLetter()
+        grid-area: birth
+        & > span
+            grid-area: birth-answer
+            font-size: 1rem
+            margin-top: 0.3rem
+            color: black
+            font-weight: 500
+    &__like
+        position: relative
+        left: 23rem
+        bottom: 4.7rem
+        width: 35px
+        height: 35px
+        justify-self: center
+        margin-top: 0.3rem
+        cursor: pointer
+    &__count
+        position: relative
+        left: 23.8rem
+        bottom: 4.5rem
+        font-family: raleway
+        font-weight: 650
+        color: #320090
+    &__small-line
+        border: 0.6px solid #320090
+
+    &__comment
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 30px
+        position: relative
+        bottom: 1.6rem
+        &-input
+            border-radius: 30px
+            font-size: 1rem
+            width: 88%
+            height: 20px
+            font-family: raleway
+            border-style: none
+            text-align: left
+            padding: .6rem 0rem .6rem .8rem
+            &:focus
+                outline: none
+  
+    &__form
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-radius: 30px
+        margin: .5rem 0rem
+        opacity: 60%
+        background-color: white 
+        &-input
+            padding: 0 0.5rem
+            border-radius: 30px
+            width: 22rem
+            height: 2rem
+            font-family: raleway
+            border-style: none
+            text-align: justify
+            color: #320090    
+        &-input:focus
+            background-color: white
+            opacity: 100%
+            text-emphasis: none
+            outline: none
+            user-select: none
+            
+        &-button
+            background-color: white
+            border: 0px
+            outline: none
+            padding:  0 0.5rem
+            cursor: pointer
+            border-radius:40%
+            opacity: 40%
+
+        &-button:hover
+            color: #320090
+            font-weight: 400
+            opacity: 200%                
